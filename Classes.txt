@@ -1,0 +1,32 @@
+Classes in Python
+ Example from hackerrank
+class Person:
+	def __init__(self, name):
+		self.name = name
+class Student(Person):
+	def__init__(self,name,grade):
+		Person.__init__(self,name)
+		Self.grade = grade
+
+
+S= Student(name,grade)
+
+
+Abstract classes:
+Abstract classes are classes that contain one or more abstract methods.
+An abstract method is a method that is declared but not implemented.
+
+From abc import ABCMeta, abstractmethod
+Class Book:
+	__metaclass__ = ABCMeta
+	Def __init__ (self,title):
+		Self.title = title
+	@abstractmethod
+	Def display():
+		Pass
+Class MyBook(Book):
+	Def __init__(self,title,price):
+		Book.__init__(self,title)
+		Self.price = price
+	Def display():
+		Print “Title” + self.title
